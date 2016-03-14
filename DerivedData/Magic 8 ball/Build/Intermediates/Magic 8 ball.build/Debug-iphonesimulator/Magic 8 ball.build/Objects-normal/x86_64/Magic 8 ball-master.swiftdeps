@@ -1,7 +1,7 @@
 version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
 options: "5a9cbebfc237dc9b53570d3346334b14"
-build_time: [511238360, 148183000]
+build_time: [511310267, 346965000]
 inputs:
+  "/Users/ChenYiTai/Documents/Xcode/Magic 8 ball/Magic 8 ball/EightBallModel.swift": [511242046, 0]
   "/Users/ChenYiTai/Documents/Xcode/Magic 8 ball/Magic 8 ball/AppDelegate.swift": [510633563, 0]
-  "/Users/ChenYiTai/Documents/Xcode/Magic 8 ball/Magic 8 ball/ViewController.swift": [511233895, 0]
-  "/Users/ChenYiTai/Documents/Xcode/Magic 8 ball/Magic 8 ball/EightBallModel.swift": [510982120, 0]
+  "/Users/ChenYiTai/Documents/Xcode/Magic 8 ball/Magic 8 ball/ViewController.swift": [511310158, 0]

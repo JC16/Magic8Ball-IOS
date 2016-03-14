@@ -40,22 +40,6 @@ class EnightBallModel : CustomStringConvertible, CustomDebugStringConvertible {
         }
     }
     
-    /*
-    private var somethingElse: Int = 4
-    
-    var something: Int {
-        get {
-            return somethingElse
-        }
-        
-        set {
-            print("You set something to \(newValue)")
-            somethingElse = newValue
-        }
-    }
-*/
-    
-    
     init()
     {
         responseArray = [String] ()
@@ -82,6 +66,13 @@ class EnightBallModel : CustomStringConvertible, CustomDebugStringConvertible {
         print(responseArray![randomIndex])
         
     }
+    
+    func getResponse() -> String
+    {
+        let randomIndex = Int(arc4random_uniform(UInt32(responseArray!.count)))
+        return responseArray![randomIndex]
+    }
+    
     func printable()
     {
         print(description)

@@ -486,6 +486,7 @@
 				29EBFA661C8D215B0072B3B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		29EBFA671C8D215B0072B3B7 /* Build configuration list for PBXNativeTarget "Magic 8 ballTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +495,7 @@
 				29EBFA691C8D215B0072B3B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		29EBFA6A1C8D215B0072B3B7 /* Build configuration list for PBXNativeTarget "Magic 8 ballUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +504,7 @@
 				29EBFA6C1C8D215B0072B3B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

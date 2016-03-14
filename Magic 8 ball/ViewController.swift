@@ -11,6 +11,43 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var QuestionField: UITextField!
+    
+    @IBOutlet weak var CircleView: UIImageView!
+    
+    @IBOutlet weak var ShakeButton: UIButton!
+    
+    @IBOutlet weak var ResponseLabel: UILabel!
+    
+    @IBAction func shakeButtonPressed()
+    {
+        let myModel = EnightBallModel()
+        
+        var response : String
+        
+        response = myModel.getResponse()
+        
+        ResponseLabel.text = response
+        
+    }
+    
+    func textFieldShouldReturn(textfield : UITextField)->Bool
+    {
+       
+        textfield.resignFirstResponder()
+        QuestionField.becomeFirstResponder()
+        
+        let myModel = EnightBallModel()
+        
+        var response: String
+        response = myModel.getResponse()
+        ResponseLabel.text = response
+        
+        return true
+    }
+
+    
+    //@IBAction func
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +57,8 @@ class ViewController: UIViewController {
         print(String(format: "%.2f", myage))
         let myname : String = "Chen Yi Tai"
         print(myname)
+        
+        //QuestionField.returnKeyType = UIReturnKeyType.Go
         
         let myModel = EnightBallModel(extraResponseArray: ["Hello"])
         

@@ -107,11 +107,21 @@ SWIFT_CLASS("_TtC12Magic_8_ball11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UITextField;
+@class UIImageView;
+@class UIButton;
+@class UILabel;
 @class NSBundle;
 @class NSCoder;
 
 SWIFT_CLASS("_TtC12Magic_8_ball14ViewController")
 @interface ViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UITextField * __null_unspecified QuestionField;
+@property (nonatomic, weak) IBOutlet UIImageView * __null_unspecified CircleView;
+@property (nonatomic, weak) IBOutlet UIButton * __null_unspecified ShakeButton;
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified ResponseLabel;
+- (IBAction)shakeButtonPressed;
+- (BOOL)textFieldShouldReturn:(UITextField * __nonnull)textfield;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
