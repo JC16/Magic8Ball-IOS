@@ -6,17 +6,17 @@ provides-nominal:
 provides-member:
 - ["C12Magic_8_ball14ViewController", ""]
 provides-dynamic-lookup:
-- "viewDidLoad"
 - "didReceiveMemoryWarning"
+- "viewDidLoad"
 depends-top-level:
-- "UIViewController"
+- !private "EnightBallModel"
+- !private "print"
 - !private "Array"
+- "ViewController"
+- "UIViewController"
+- !private "StringLiteralType"
 - !private "Double"
 - !private "String"
-- !private "EnightBallModel"
-- "ViewController"
-- !private "StringLiteralType"
-- !private "print"
 depends-member:
 - !private ["PSs9AnyObject", "EnightBallModel"]
 - !private ["PSs9AnyObject", "String"]
