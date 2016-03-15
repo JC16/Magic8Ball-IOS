@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var QuestionField: UITextField!
     
@@ -19,7 +19,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var ResponseLabel: UILabel!
     
-    @IBAction func shakeButtonPressed()
+    
+    func changelabel()
     {
         let myModel = EnightBallModel()
         
@@ -27,26 +28,39 @@ class ViewController: UIViewController {
         
         response = myModel.getResponse()
         
+        changeCircle()
+        
         ResponseLabel.text = response
+    }
+    
+    func changeCircle()
+    {
+        let imgName : [String] = ["circle1","circle2","circle3","circle4","circle5","circle6"]
+        
+        let randomIndex = Int(arc4random_uniform(UInt32(imgName.count)))
+        
+        self.CircleView.image = UIImage(named: imgName[randomIndex])
+        
+    }
+    
+    @IBAction func shakeButtonPressed()
+    {
+        
+        changelabel()
         
     }
     
     func textFieldShouldReturn(textfield : UITextField)->Bool
     {
        
-        textfield.resignFirstResponder()
-        QuestionField.becomeFirstResponder()
+        textfield.returnKeyType = UIReturnKeyType.Go
+        QuestionField.resignFirstResponder()
         
-        let myModel = EnightBallModel()
-        
-        var response: String
-        response = myModel.getResponse()
-        ResponseLabel.text = response
+        changelabel()
         
         return true
     }
 
-    
     //@IBAction func
     
     override func viewDidLoad() {
@@ -58,7 +72,7 @@ class ViewController: UIViewController {
         let myname : String = "Chen Yi Tai"
         print(myname)
         
-        //QuestionField.returnKeyType = UIReturnKeyType.Go
+        self.QuestionField.returnKeyType = UIReturnKeyType.Go
         
         let myModel = EnightBallModel(extraResponseArray: ["Hello"])
         

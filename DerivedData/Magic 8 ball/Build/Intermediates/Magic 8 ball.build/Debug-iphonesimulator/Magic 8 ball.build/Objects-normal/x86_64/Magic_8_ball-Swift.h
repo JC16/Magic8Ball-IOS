@@ -115,11 +115,13 @@ SWIFT_CLASS("_TtC12Magic_8_ball11AppDelegate")
 @class NSCoder;
 
 SWIFT_CLASS("_TtC12Magic_8_ball14ViewController")
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITextFieldDelegate>
 @property (nonatomic, weak) IBOutlet UITextField * __null_unspecified QuestionField;
 @property (nonatomic, weak) IBOutlet UIImageView * __null_unspecified CircleView;
 @property (nonatomic, weak) IBOutlet UIButton * __null_unspecified ShakeButton;
 @property (nonatomic, weak) IBOutlet UILabel * __null_unspecified ResponseLabel;
+- (void)changelabel;
+- (void)changeCircle;
 - (IBAction)shakeButtonPressed;
 - (BOOL)textFieldShouldReturn:(UITextField * __nonnull)textfield;
 - (void)viewDidLoad;
